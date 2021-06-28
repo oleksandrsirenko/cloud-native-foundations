@@ -4,10 +4,10 @@
 
 Extend the Python Flask application with `/status` and `/metrics` endpoints, considering the following requirements:
 
-    Both endpoints should return an HTTP 200 status code
-    Both endpoints should return a JSON response e.g. `{"user": "admin"}`. (Note: the JSON response can be hardcoded at this stage)
-    The `/status` endpoint should return a response similar to this example: `result: OK - healthy`
-    The `/metrics `endpoint should return a response similar to this example: `data: {UserCount: 140, UserCountActive: 23}`
+- Both endpoints should return an HTTP 200 status code
+- Both endpoints should return a JSON response e.g. `{"user": "admin"}`. (Note: the JSON response can be hardcoded at this stage)
+- The `/status` endpoint should return a response similar to this example: `result: OK - healthy`
+- The `/metrics `endpoint should return a response similar to this example: `data: {UserCount: 140, UserCountActive: 23}`
 
 Tips: If you get stuck, feel free to check the solution video where detailed operations are demonstrated.
 
@@ -63,14 +63,19 @@ Tips: If you get stuck, feel free to check the solution video where detailed ope
 
 ### Solution #2:
 
-Add a log line to each route we want to track logs, like:
+Add log collection logic to the appropriate functions for each route you want to track, like:
 
 ```python
-app.logger.info("Metrics request successfull")
+@app.route("/metrics")
+def metrics():
+    ... 
+    app.logger.info("Metrics request successfull")
 ```
 
-also add the logic to save the logs in a file to main function (need to import `logging` library first):
+Also add the logic to save the logs in a file to main function (need to import `logging` library first):
 
 ```python
 logging.basicConfig(filename='app.log',level=logging.DEBUG)
 ```
+
+See complete code in the `app.py`
