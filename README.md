@@ -17,3 +17,11 @@ This repository is an expanded version of the [course materials](https://github.
 - Ability to use Git, Linux machines, and Linux Command Line
 - Familiar with Web application development in any language
 - Familiarity with Docker and exposure to a CI/CD pipeline are not required for success in this program but are helpful skills to have.
+
+## How to Use
+- try to solve each taks accordind to the learning schedule
+- if stuck go to the solutions folder and reproduce solution with the readme, compare it with code, test
+
+## Quick Start
+- pull the repository
+- install requirements

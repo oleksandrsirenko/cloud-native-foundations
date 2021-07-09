@@ -1,81 +1,54 @@
 # Learing Schema
 
-### Exercise #1 Status and Metrics
+---
 
-Extend the Python Flask application with `/status` and `/metrics` endpoints, considering the following requirements:
+1. Introdiction to Cloud Native Fundamentals
+2. Architecture Consideration for Cloud Native Application 
+3. Container Orchestraition with Kubernetes
+4. Open Source PaaS
+5. CI/CD with Cloud Native Tooling
 
-- Both endpoints should return an HTTP 200 status code
-- Both endpoints should return a JSON response e.g. `{"user": "admin"}`. (Note: the JSON response can be hardcoded at this stage)
-- The `/status` endpoint should return a response similar to this example: `result: OK - healthy`
-- The `/metrics `endpoint should return a response similar to this example: `data: {UserCount: 140, UserCountActive: 23}`
+TODO GLOBAL:
+- Refine the structure: add the tasks for each lesson in the exercises folder, transfer all solutions READMEs with tips to solutions folder
+- Maybe even add the Learning Schedule file in the root of repository
+- Add `How to Use` to main README file with the instruction like: look into the task description and try to solve, if you have a problem go to solutions and compare or find a tips how to handle errors
 
-Tips: If you get stuck, feel free to check the solution video where detailed operations are demonstrated.
+# Lesson 2 Architecture Consideration for Cloud Native Application
 
-### Solution #1:
+TODO: 
+- Transfer the solution from README in exercise to solutions. The exercises must be clean, at least this is a good idea for the education purposes
 
-Add to route for each logic like:
+# Lesson 3 - Container Orchestraition with Kubernetes
 
-```python
-@app.route("/status")
-def status():
-    response = app.response_class(
-        response=json.dumps({"result": "OK - healthy"}),
-        status=200,
-        mimetype="application/json"
-    )
+TODO 1:
+- Create all tasks for Kubernetes Deployment [see demo](https://classroom.udacity.com/nanodegrees/nd064-1/parts/30cb07da-8fd4-4438-a209-b3457adb5d82/modules/7b21dfa4-aac8-4d24-82c5-65325e6dc691/lessons/d9fa86b3-301d-4966-86f8-a2f34a5a7ca3/concepts/05a27e6d-5a5d-4121-91aa-c891ab80e6ae)
+- Step by step solution guide, including installation of the required packages and tools
+- Add external resources to syntax, guides, docs
+- Test the solution one more time
+- Look at the discussion and pull the most common issues
+- Update task, add it to main pool and commit solution
 
-    return response
-```
+TODO 1 PROGRESS:
+- `cd exercises`
+- `vagrant up` - up the virtual box, if nessesary init with the `vagrant init` first
+- `vagrant status` check the status of virtual machine
+- next ssh the vagrant `vagrant ssh`
+- `curl -sfL https://get.k3s.io | sh` get k3s with one comand in vagarnt environment see details on k3s.io
+- check nodes `kubectl get no` if get error like permission denied need to configure the `/etc/rancher/k3s/k3s.yaml` or use a comand to perform as a superuser `sudo su`
 
-```python
-@app.route("/metrics")
-def metrics():
-    response = app.response_class(
-        response=json.dumps(
-            {
-                "status": "success",
-                "code": 0,
-                "data": {"UserCount": 140, "UserCountActive": 23}
-            }
-        ),
-        status=200,
-        mimetype="application/json"
-    )
+Notes:
+1. To view a configuration of cluster:
+`kubectl config view`
+2. To stop the Kubernetes cluster, as the root user, enter the following command:
+`shutdown -h now`
 
-    return response
-```
+sources to check:
+1. [Stopping and starting Kubernetes cluster](https://www.ibm.com/docs/en/fci/1.0.3?topic=kubernetes-stopping-starting-cluster)
+2. [Organizing Cluster Access Using kubeconfig Files](https://kubernetes.io/docs/concepts/configuration/organize-cluster-access-kubeconfig/)
+3. [How to Manage Kubernetes With Kubectl](https://rancher.com/learning-paths/how-to-manage-kubernetes-with-kubectl/)
 
-### Exercise #2: Application Logging
+## Lesson 3 part 2 (16-27)
+  - Kubernetes Resources
+  - Kubernetes Manifests
 
-Logging is a core factor in increasing the visibility and transparency of an application. When in troubleshooting or debugging scenarios, it is paramount to pin-point the functionality that impacted the service. This exercise will focus on bringing the logging capabilities to an application.
-
-At this stage, you have extended the Hello World application to handle different endpoints. Once an endpoint is reached, a log line should be recorded showcasing this operation.
-
-In this exercise, you need to further develop the Hello World application collect logs, with the following requirements:
-
-- A log line should be recorded the timestamp and the requested endpoint e.g. `"{{TIMESTAMP}}, {{ ENDPOINT_NAME}} endpoint was reached"`
-- The logs should be stored in a file with the name `app.log`. Refer to the [logging Python module](https://docs.python.org/3/library/logging.html#logging.basicConfig) for more details.
-- Enable the collection of Python logs at the `DEBUG` level. Refer to the [logging Python module](https://docs.python.org/3/library/logging.html#logging.basicConfig) for more details.
-
-Note: For the environment setup, follow the instructions in the previous exercise.
-
-Tips: If you get stuck, feel free to check the solution video where detailed operations are demonstrated.
-
-### Solution #2:
-
-Add log collection logic to the appropriate functions for each route you want to track, like:
-
-```python
-@app.route("/metrics")
-def metrics():
-    ... 
-    app.logger.info("Metrics request successfull")
-```
-
-Also add the logic to save the logs in a file to main function (need to import `logging` library first):
-
-```python
-logging.basicConfig(filename='app.log',level=logging.DEBUG)
-```
-
-See complete code in the `app.py`
+item 16. typos "A `note` can host multiple pods for different applications." `noDe`
