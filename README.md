@@ -40,10 +40,10 @@ Make sure you have the following dependencies installed:
 
 ## How to Use
 
-All supporting materials and the curriculum can be found in the exercises directory, where each subfolder consists of the provided skeleton code and the README.md file describing the exercises. All solutions in the directory of the same name are supported with notes on possible errors and how to fix them.
+All supporting materials and the curriculum can be found in the exercises directory, where each subfolder consists of the provided skeleton code and the `README.md` file describing the exercises. All solutions in the directory of the same name are supported with notes on possible errors and how to fix them.
 
 - try to solve each problem according to the instructions
-- if you get stuck, feel free to check the solutions, reproduce them with a specific README.md file, compare them with the provided code, and test.
+- if you get stuck, feel free to check the solutions, reproduce them with a specific `README.md` file, compare them with the provided code, and test.
 
 ## Recomendations
 
