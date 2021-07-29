@@ -1,8 +1,8 @@
-## Basic Python Flask application
+## Python Flask Application: Exercises with Solutions
 
 ---
 
-### Exercise #1 Endpoints for Application Status:
+### Exercise #1 Endpoints for Application Status
 
 Extend the Python Flask application with `/status` and `/metrics` endpoints, considering the following requirements:
 
@@ -11,7 +11,41 @@ Extend the Python Flask application with `/status` and `/metrics` endpoints, con
 - The `/status` endpoint should return a response similar to this example: `result: OK - healthy`
 - The `/metrics `endpoint should return a response similar to this example: `data: {UserCount: 140, UserCountActive: 23}`
 
-Tips: If you get stuck, feel free to check the [solution video](https://www.youtube.com/watch?v=Kj_hGnViybg) where detailed operations are demonstrated.
+Feel free to check the [solution video](https://www.youtube.com/watch?v=Kj_hGnViybg) where detailed operations are demonstrated.
+
+### Solution #1 Endpoints for Application Status:
+
+Add to route for each logic like:
+
+```python
+@app.route("/status")
+def status():
+    response = app.response_class(
+        response=json.dumps({"result": "OK - healthy"}),
+        status=200,
+        mimetype="application/json"
+    )
+
+    return response
+```
+
+```python
+@app.route("/metrics")
+def metrics():
+    response = app.response_class(
+        response=json.dumps(
+            {
+                "status": "success",
+                "code": 0,
+                "data": {"UserCount": 140, "UserCountActive": 23}
+            }
+        ),
+        status=200,
+        mimetype="application/json"
+    )
+
+    return response
+```
 
 ### Exercise #2: Application Logging
 
@@ -27,8 +61,23 @@ In this exercise, you need to further develop the Hello World application collec
 
 Note: For the environment setup, follow the instructions in the previous exercise.
 
-Tips: If you get stuck, feel free to check the [solution video](https://www.youtube.com/watch?v=rdoXsSx1ghk) where detailed operations are demonstrated.
+Feel free to check the [solution video](https://www.youtube.com/watch?v=rdoXsSx1ghk) where detailed operations are demonstrated.
 
----
+### Solution #2:
 
-See complete code in the `app.py` and solution in `README.md` within the `solutions/python-helloworld` directory.
+Add log collection logic to the appropriate functions for each route you want to track, like:
+
+```python
+@app.route("/metrics")
+def metrics():
+    ... 
+    app.logger.info("Metrics request successfull")
+```
+
+Also add the logic to save the logs in a file to main function (need to import `logging` library first):
+
+```python
+logging.basicConfig(filename='app.log',level=logging.DEBUG)
+```
+
+See complete code in the `app.py`
