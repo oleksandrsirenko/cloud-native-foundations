@@ -18,7 +18,7 @@ go run main.go
 Access the application on: http://127.0.0.1:6111/
 
 
-## Excercise
+## Excercise #1: Docker for Application Packaging
 
 ---
 
@@ -48,54 +48,36 @@ Docker container:
 
 **NOTE:** You will need to use `docker login` to login into Docker before pushing images to DockerHub.
 
+## Exercise #2: Deploy Your First Kubernetes Cluster
 
-## Solution
+### Environment Setup
 
----
+Provision a Vagrant box locally and install Kubernetes with k3s.
 
-1. Create a Dockerfile manually or from the terminal: `touch Dockerfile`
-2. Open the Dockerfile and create layers due to task #1 and save it:
+Note: Make sure to have VirtualBox `6.1.16` or higher installed.
 
-```dockerfile
-FROM golang:alpine
+- [x] Install [vagrant](https://www.vagrantup.com) on your machine
+- [x] Clone the course repository using git commands
+- [x] Navigate inside the `exercises` directory and examine the `Vagrantfile`
+- [x] Create a Vagrant box using `vagrant up` command (Note: you need to be in the same directory as the Vagrantfile for this command to work)
+- [x] SSH into the vagrant box by using `vagrant ssh` command
+- [x] Deploy a Kubernetes cluster using [k3s](https://k3s.io/)
+- [x] Examine your cluster using `kubectl` command(Note: you need to be root to access the kubeconfig file, use `sudo su -` before using kubectl commands)
 
-WORKDIR /go/src/app
+### Exercise 
 
-ADD . .
+From the kubeconfig, identify:
 
-RUN go build  -o helloworld
+- the IP and port of the API server
+- authentication mechanism
 
-EXPOSE 6111
+Note: *Refer to the main [k3s installation guide](https://rancher.com/docs/k3s/latest/en/quick-start/#install-script), to find the location of the kubeconfig file.*
 
-CMD ["./helloworld"]
-```
+From the cluster using kubectl commands to identify:
 
-3. Build the Docker image (make sure that you are in the go-helloworld directory):
-`docker build -t go-helloworld .`
+- endpoints of the control plane and add-ons
+- amount of nodes
+- node internal IP
+- the pod CIDR allocate to the node
 
-**NOTE:** If you get the permission denied response:
-`Got permission denied while trying to connect to the Docker daemon socket at unix:///var/run/docker.sock: Post http://%2Fvar%2Frun%2Fdocker.sock/v1.24/build?buildargs=%7B%7D&cachefrom=%5B%5D&cgroupparent=&cpuperiod=0&cpuquota=0&cpusetcpus=&cpusetmems=&cpushares=0&dockerfile=Dockerfile&labels=%7B%7D&memory=0&memswap=0&networkmode=default&rm=1&shmsize=0&t=go-helloworld&target=&ulimits=null&version=1: dial unix /var/run/docker.sock: connect: permission denied`
-   
-Fix it:
-- `sudo usermod -aG docker ${USER}`
-- `su - ${USER}`
-   
-Check:
-- `docker` ps -a
-   
-See details: [here](https://www.digitalocean.com/community/questions/how-to-fix-docker-got-permission-denied-while-trying-to-connect-to-the-docker-daemon-socket)
-   
-Repeat step 3 (build the Docker image)
-
-**NOTE:** if you have error messages like this:
-`go: go.mod file not found in current directory or any parent directory; see 'go help modules'` 
-`The command '/bin/sh -c go build  -o helloworld' returned a non-zero code: 1`
-it means you need to init `go.mod` file. We can handle this issue using one of the following approaches:
-- add layer `RUN go mod init` before the `RUN go build  -o helloworld` to Dockerfile
-
-1. Run the Docker image: `docker run -d -p 6111:6111 go-helloworld`
-2. Verify if the application is available and work properly on localhost 127.0.0.1:6111 (if you have problems accessing `https`, just change it to `http`)
-3. Tag the app: `docker tag go-helloworld <YOUR DOCKERHUB USER NAME>/go-helloworld:v1.0.0`
-4. Push the app to the DockerHub repo (need account): `docker push <YOUR DOCKERHUB USER NAME>/go-helloworld:v1.0.0`
-   
-Solved!
+Note: *To access kubectl commands you need to become root by using `sudo su -` command.*
