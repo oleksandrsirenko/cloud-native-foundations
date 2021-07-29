@@ -81,7 +81,7 @@ spec:
 
 `ctl-c` and `:wq` to save changes
 
-Next step is apply out yaml manifest with the following command:
+Next step is apply created yaml manifest with the following command:
 
 - `kubectl apply -f argocd-server-nodeport.yaml` 
 
@@ -122,7 +122,7 @@ So be careful and check if everything was written correctly, e.g.:
 
 - `cat nginx-alpine.yaml`
 
-## Use ArgoCD in browser within the adresse
+## Use ArgoCD in your browser at
 
 - http://192.168.50.4.30007
 - http://192.168.50.4.30008
