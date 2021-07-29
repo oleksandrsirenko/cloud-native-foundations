@@ -81,7 +81,7 @@ Fix it:
 - `su - ${USER}`
    
 Check:
-- `docker` ps -a
+- `docker ps -a`
    
 See details: [here](https://www.digitalocean.com/community/questions/how-to-fix-docker-got-permission-denied-while-trying-to-connect-to-the-docker-daemon-socket)
    
@@ -126,6 +126,7 @@ Feel free to check the [video Docker for Application Packaging](https://www.yout
 - `kubectl describe node node-name` - to get all the configuration details about the node, including the allocated pod CIDR
 
 [Kubeconfig Walkthrough video tutorial](https://www.youtube.com/watch?v=yi1kR9nDw1g)
+
 ## Additional Resourses
 
 [Organizing Cluster Access Using kubeconfig Files](https://kubernetes.io/docs/concepts/configuration/organize-cluster-access-kubeconfig/)

@@ -21,7 +21,7 @@ TODO:
 # Lesson 3 - Container Orchestraition with Kubernetes
 
 TODO 1:
-- Create all tasks for Kubernetes Deployment [see demo](https://classroom.udacity.com/nanodegrees/nd064-1/parts/30cb07da-8fd4-4438-a209-b3457adb5d82/modules/7b21dfa4-aac8-4d24-82c5-65325e6dc691/lessons/d9fa86b3-301d-4966-86f8-a2f34a5a7ca3/concepts/05a27e6d-5a5d-4121-91aa-c891ab80e6ae)
+- Create all tasks for Kubernetes Deployment [see demo](https://www.youtube.com/watch?v=8Dh3Z2lBR3s)
 - Step by step solution guide, including installation of the required packages and tools
 - Add external resources to syntax, guides, docs
 - Test the solution one more time
@@ -29,14 +29,27 @@ TODO 1:
 - Update task, add it to main pool and commit solution
 
 TODO 1 PROGRESS:
-- `cd exercises`
-- `vagrant up` - up the virtual box, if nessesary init with the `vagrant init` first
-- `vagrant status` check the status of virtual machine
-- next ssh the vagrant `vagrant ssh`
-- `curl -sfL https://get.k3s.io | sh` get k3s with one comand in vagarnt environment see details on k3s.io
-- check nodes `kubectl get no` if get error like permission denied need to configure the `/etc/rancher/k3s/k3s.yaml` or use a comand to perform as a superuser `sudo su`
 
-Notes:
+Install
+
+- `sudo apt install virtualbox` - install VirtualBox this is the prerequisites to using Vagrant
+- `sudo apt-get update && sudo apt-get install vagrant` - install Vagrant
+
+Up Virtual Machine
+
+- `cd exercises` - change directory to exercises (where the Vagrant file is)
+- `vagrant up` - up the virtual box, if nessesary init with the `vagrant init` first
+- `vagrant status` - check the status of virtual machine
+
+**Notes**: *To stop this VM, you can run `vagrant halt` to shut it down forcefully, or you can run `vagrant suspend` to simply suspend the virtual machine. In either case, to restart it again, simply run `vagrant up`.
+
+Kubernetes Cluster
+
+- `vagrant ssh` - next go to the vagrant shell
+- `curl -sfL https://get.k3s.io | sh` get k3s with one command in vagrant environment (inside the shell) see details on [k3s.io](https://k3s.io/)
+- check nodes `kubectl get no` if get error like permission denied need to configure the `/etc/rancher/k3s/k3s.yaml` or use `sudo su` - a command to perform as a superuser.
+
+**Notes**:
 1. To view a configuration of cluster:
 `kubectl config view`
 2. To stop the Kubernetes cluster, as the root user, enter the following command:
