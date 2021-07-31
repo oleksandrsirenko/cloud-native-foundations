@@ -79,7 +79,7 @@ spec:
   type: NodePort
 ```
 
-`ctl-c` and `:wq` to save changes
+`esc` and `:wq` to save changes
 
 Next step is apply created yaml manifest with the following command:
 
@@ -108,7 +108,7 @@ spec:
   syncPolicy: {}
   ```
 
-`ctl-c` and `:wq` to save changes
+`esc` and `:wq` to save changes
 
 - `kubectl apply -f nginx-alpine.yaml` - appling will create application with the command line messege: `application.argoproj.io/nginx-alpine created`
 
