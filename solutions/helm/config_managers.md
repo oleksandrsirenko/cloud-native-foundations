@@ -66,7 +66,7 @@ Finally, using the values files above (values-prod, values-staging), create 2 Ar
 
 Helm provides a powerful mechanism to inject values to templated YAML manifests.
 
-#### Create Helm Chart
+### Create Helm Chart
 
 The full Helm chart for `nginx-deployment` can found in the course repository.
 

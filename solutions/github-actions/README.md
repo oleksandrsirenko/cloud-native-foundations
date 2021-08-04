@@ -1,1 +1,0 @@
-[Dockerize the app with GitHub Actions](https://www.youtube.com/watch?v=rx3N8MImP9k)

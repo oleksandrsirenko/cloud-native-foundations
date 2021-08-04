@@ -33,28 +33,28 @@ Make sure the following tasks are compleated:
 
 ---
 
-#### Create the namespace
+### Create the namespace
 
 **Note**: label option is not available with `kubectl create`
 
 - `kubectl create ns demo`
 
-#### Label the namespace
+### Label the namespace
 
 - `kubectl label ns demo tier=test`
 
-#### Create the nginx-alpine deployment 
+### Create the nginx-alpine deployment 
 
 - `kubectl create deploy nginx-alpine --image=nginx:alpine  --replicas=3 --namespace demo`
 
-#### Label the deployment
+### Label the deployment
 
 - `kubectl label deploy nginx-alpine app=nginx tag=alpine --namespace demo`
 
-#### Expose the nginx-alpine deployment, which will create a service
+### Expose the nginx-alpine deployment, which will create a service
 
 - `kubectl expose deployment nginx-alpine --port=8111 --namespace demo`
 
-#### Create a config map
+### Create a config map
 
 - `kubectl create configmap nginx-version --from-literal=version=alpine --namespace demo`

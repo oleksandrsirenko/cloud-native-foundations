@@ -1,19 +1,19 @@
-## Python Flask Application: Exercises with Solutions
+# Python Flask Application: Exercises with Solutions
 
 ---
 
-### Exercise #1 Endpoints for Application Status
+## Exercise #1 Endpoints for Application Status
 
 Extend the Python Flask application with `/status` and `/metrics` endpoints, considering the following requirements:
 
 - Both endpoints should return an HTTP 200 status code
 - Both endpoints should return a JSON response e.g. `{"user": "admin"}`. (Note: the JSON response can be hardcoded at this stage)
 - The `/status` endpoint should return a response similar to this example: `result: OK - healthy`
-- The `/metrics `endpoint should return a response similar to this example: `data: {UserCount: 140, UserCountActive: 23}`
+- The `/metrics` endpoint should return a response similar to this example: `data: {UserCount: 140, UserCountActive: 23}`
 
 Feel free to check the [solution video](https://www.youtube.com/watch?v=Kj_hGnViybg) where detailed operations are demonstrated.
 
-### Solution #1 Endpoints for Application Status:
+## Solution 1: Endpoints
 
 Add to route for each logic like:
 
@@ -47,7 +47,7 @@ def metrics():
     return response
 ```
 
-### Exercise #2: Application Logging
+## Exercise 2: Application Logging
 
 Logging is a core factor in increasing the visibility and transparency of an application. When in troubleshooting or debugging scenarios, it is paramount to pin-point the functionality that impacted the service. This exercise will focus on bringing the logging capabilities to an application.
 
@@ -63,7 +63,7 @@ Note: For the environment setup, follow the instructions in the previous exercis
 
 Feel free to check the [solution video](https://www.youtube.com/watch?v=rdoXsSx1ghk) where detailed operations are demonstrated.
 
-### Solution #2:
+## Solution 2: Logging
 
 Add log collection logic to the appropriate functions for each route you want to track, like:
 
@@ -81,27 +81,3 @@ logging.basicConfig(filename='app.log',level=logging.DEBUG)
 ```
 
 See complete code in the `app.py`
-
-
-## Build docker image and push it to docker hub
-
-- `sudo apt-get install docker.io` - install docker if not have it yet
-- create a Dockerfile like this:
-
-```dockerfile
-FROM python:3.8
-LABEL maintainer="Oleksandr Sirenko"
-
-COPY . /app
-WORKDIR /app
-RUN pip install -r requirements.txt
-
-# command to run on container start
-CMD [ "python", "app.py" ]
-```
-
-- `docker build -t python-helloworld .` - build a docker image
-- `docker tag go-helloworld <YOUR DOCKERHUB USER NAME>/go-helloworld:v1.0.0` - tag your app if you need
-- `docker push <YOUR DOCKERHUB USER NAME>/go-helloworld:v1.0.0` - push the app to the DockerHub repo (need account)
-
-**NOTE**: if get issues see the possible solutions in `solutions/go-helloworld/README.md`
