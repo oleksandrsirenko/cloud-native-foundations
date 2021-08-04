@@ -4,4 +4,5 @@ For this task, you need to create two secrets in your Docker Hub: DOCKERHUB_USER
 
 See details in the tutorial [Dockerize the app with GitHub Actions](https://www.youtube.com/watch?v=rx3N8MImP9k)
 
-[Best practices from Docker docs](https://docs.docker.com/ci-cd/github-actions/)
+[Best Practices from Docker Docs](https://docs.docker.com/ci-cd/github-actions/)
+[Publishing Docker Iimages Approach from GitHub](https://docs.github.com/en/actions/guides/publishing-docker-images)
