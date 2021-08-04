@@ -20,14 +20,11 @@ jobs:
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
       -
-        name: Checkout
+        name: Check Out Repo
         uses: actions/checkout@v2
       -
         name: Set up QEMU
         uses: docker/setup-qemu-action@v1
-      -
-        name: Set up Docker Buildx
-        uses: docker/setup-buildx-action@v1
       -
         name: Login to DockerHub
         uses: docker/login-action@v1 
@@ -35,11 +32,14 @@ jobs:
           username: ${{ secrets.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_TOKEN }}
       -
+        name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v1
+      -
         name: Build and push
         uses: docker/build-push-action@v2
         with:
-          context: .
+          context: ./
           file: ./Dockerfile
           platforms: linux/amd64
           push: true
-          tags: osdoc/python-helloworld:latest
+          tags: ${{ secrets.DOCKERHUB_USERNAME }}/python-helloworld:latest
