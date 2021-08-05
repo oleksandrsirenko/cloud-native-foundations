@@ -1,6 +1,6 @@
 # Go Hello World
 
-***This is a simple Go web application that prints a "Hello World" message.***
+*This is a simple Go web application that prints a "Hello World" message.*
 
 ## Run the application
 
