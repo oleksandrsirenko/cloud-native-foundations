@@ -1,8 +1,6 @@
 # Cloud Native Foundations by Udacity Hands-On Course Materials
 
----
-
-***Learn how to structure, package, and release an application to a Kubernetes cluster, while using an automated CI/CD pipeline.***
+*Learn how to structure, package, and release an application to a Kubernetes cluster, while using an automated CI/CD pipeline.*
 
 The Cloud Native Foundations course is Phase I of the [SUSE Cloud Native Foundations Scholarship Program](https://www.udacity.com/scholarships/suse-cloud-native-foundations-scholarship) from Udacity.
 
@@ -47,4 +45,4 @@ All supporting materials and the curriculum can be found in the exercises direct
 
 ## Recomendations
 
-The current solutions have been created and tested on [Ubuntu 20.04](https://ubuntu.com/download/desktop) using [VS Code](https://code.visualstudio.com) as IDE. While most of this stuff will work on Windows, it will take a lot of work to debug and solve some unusual problems, so I highly recommend using a Unix-like operating system based on the Linux kernel. This will save you a lot of time and hassle.
+The current version have been created and tested on [Ubuntu 20.04](https://ubuntu.com/download/desktop) using [VS Code](https://code.visualstudio.com) as IDE. While most of this stuff will work on Windows, it will take a lot of work to debug and solve some unusual problems, so I highly recommend using a Unix-like operating system based on the Linux kernel. This will save you a lot of time and hassle.
