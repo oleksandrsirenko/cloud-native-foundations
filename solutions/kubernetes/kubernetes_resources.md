@@ -30,8 +30,6 @@ Make sure the following tasks are completed:
 
 ## Solution 3.3: Kubernetes Resources
 
----
-
 ### Create the namespace
 
 **Note**: label option is not available with `kubectl create`
