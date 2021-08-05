@@ -1,5 +1,4 @@
-## List of the Issues
+# Curriculum
 
-- [-] An issue with access to the app at the localhost.Exercise: Deploy Your First Kubernetes Cluster. Path to markdown doc `cloud-native-foundations/solutions/kubernetes/k3s_cluster.md`
-
-- [x] Refine the docker-build.yaml file
+1. 
+Under the folder `python-helloworld`
