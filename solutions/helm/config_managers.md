@@ -1,10 +1,10 @@
-# Exercise: Configuration Managers
+# Configuration Managers
 
 For the management of multiple declarative Kubernetes manifests, a templating layer is necessary, especially if the application is replicated across different regions. For this purpose configuration managers, such as Helm and Kustomize, were introduced.
 
 This exercise will focus on creating your first Helm chart to deploy multiple Nginx applications using the same template and multiple input files.
 
-## Exercise
+## Exercises 5.2-5.3: Helm with ArgoCD
 
 Using the manifests provided in the course repository, create a helm chart (Chart.yaml, templates, values.yaml) that will template the following parameters:
 
@@ -61,12 +61,11 @@ Next, create 2 values files with the following specifications:
 
 Finally, using the values files above (values-prod, values-staging), create 2 ArgoCD application, `nginx-staging` and `nginx-prod` respectively. These should deploy the nginx Helm Chart referencing each input values files.
 
-
-## Solution Configuration Managers: Helm with ArgoCD
+## Solutions 5.2-5.3: Helm with ArgoCD
 
 Helm provides a powerful mechanism to inject values to templated YAML manifests.
 
-### Create Helm Chart
+### 5.2: Create Helm Chart
 
 The full Helm chart for `nginx-deployment` can found in the course repository.
 
@@ -139,8 +138,7 @@ configmap:
 
 The `values-staging.yaml` can be found in the course repository `solutions/helm/nginx-deployment`
 
-
-#### Deploy Helm Chart
+### 5.3: Deploy Helm Chart
 
 And finally, here is ArgoCD application CRD for the `nginx-prod` deployment:
 
