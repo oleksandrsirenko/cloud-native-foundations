@@ -1,4 +1,4 @@
-# Exercise 2: Application Logging
+# Exercise 1.2 Application Logging
 
 Logging is a core factor in increasing the visibility and transparency of an application. When in troubleshooting or debugging scenarios, it is paramount to pin-point the functionality that impacted the service. This exercise will focus on bringing the logging capabilities to an application.
 
@@ -14,7 +14,7 @@ Note: For the environment setup, follow the instructions in the previous exercis
 
 Feel free to check the [solution video](https://www.youtube.com/watch?v=rdoXsSx1ghk) where detailed operations are demonstrated.
 
-## Solution 2: Logging
+## Solution 1.2 Logging
 
 Add log collection logic to the appropriate functions for each route you want to track, like:
 
