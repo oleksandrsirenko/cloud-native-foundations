@@ -1,19 +1,17 @@
-## Basic Python Flask application
+# Basic Python Flask application
 
----
-
-### Exercise #1 Endpoints for Application Status:
+## Exercise 1.1: Endpoints for Application Status
 
 Extend the Python Flask application with `/status` and `/metrics` endpoints, considering the following requirements:
 
 - Both endpoints should return an HTTP 200 status code
 - Both endpoints should return a JSON response e.g. `{"user": "admin"}`. (Note: the JSON response can be hardcoded at this stage)
 - The `/status` endpoint should return a response similar to this example: `result: OK - healthy`
-- The `/metrics `endpoint should return a response similar to this example: `data: {UserCount: 140, UserCountActive: 23}`
+- The `/metrics` endpoint should return a response similar to this example: `data: {UserCount: 140, UserCountActive: 23}`
 
-Tips: If you get stuck, feel free to check the [solution video](https://www.youtube.com/watch?v=Kj_hGnViybg) where detailed operations are demonstrated.
+Feel free to check the [solution video](https://www.youtube.com/watch?v=Kj_hGnViybg) where detailed operations are demonstrated.
 
-### Exercise #2: Application Logging
+## Exercise 1.2: Application Logging
 
 Logging is a core factor in increasing the visibility and transparency of an application. When in troubleshooting or debugging scenarios, it is paramount to pin-point the functionality that impacted the service. This exercise will focus on bringing the logging capabilities to an application.
 
@@ -27,8 +25,6 @@ In this exercise, you need to further develop the Hello World application collec
 
 Note: For the environment setup, follow the instructions in the previous exercise.
 
-Tips: If you get stuck, feel free to check the [solution video](https://www.youtube.com/watch?v=rdoXsSx1ghk) where detailed operations are demonstrated.
+Feel free to check the [solution video](https://www.youtube.com/watch?v=rdoXsSx1ghk) where detailed operations are demonstrated.
 
----
-
-See complete code in the `app.py` and solution in `README.md` within the `solutions/python-helloworld` directory.
+## Exercise 1.3 (Optional): Build a Docker Image and Push It to the Docker Hub

@@ -1,4 +1,4 @@
-# Exercise The CD Fundamentals: Deploy application using ArgoCD
+# Exercise 5: The CD Fundamentals
 
 Continuous Delivery (CD) is the ability to get code changes reliably to production environments. This practice should be automated and should enable developers to provide value to consumers efficiently.
 
@@ -17,7 +17,7 @@ Note: Make sure to have [VirtualBox](https://www.virtualbox.org/wiki/Downloads) 
 - [x] Deploy a Kubernetes cluster using k3s
 - [x] Examine you cluster using `kubectl` command (Note: you need to be root to access the kubeconfig file, use `sudo su -` before using kubectl commands)
 
-## Exercise
+## Exercise 5.1: Deploy the Application Using ArgoCD
 
 - [x] Install ArgoCD by referring to the [installation guide](https://argoproj.github.io/argo-cd/getting_started/)
 - [x] Expose the `argocd-server` using a `NodePort` service on port `30007 `on HTTP and `30008` on HTTPS. The YAML manifest for the NodePost service can be found in the course repository

@@ -1,10 +1,10 @@
-# Exercise: Configuration Managers
+# Configuration Managers
 
 For the management of multiple declarative Kubernetes manifests, a templating layer is necessary, especially if the application is replicated across different regions. For this purpose configuration managers, such as Helm and Kustomize, were introduced.
 
 This exercise will focus on creating your first Helm chart to deploy multiple Nginx applications using the same template and multiple input files.
 
-## Exercise
+## Exercises 5.2-5.3: Helm with ArgoCD
 
 Using the manifests provided in the course repository, create a helm chart (Chart.yaml, templates, values.yaml) that will template the following parameters:
 
