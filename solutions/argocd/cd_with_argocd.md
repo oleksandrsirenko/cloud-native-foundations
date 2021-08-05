@@ -1,4 +1,6 @@
-# Exercise: The CD Fundamentals
+# Exercise 5: The CD Fundamentals
+
+## Task 1: Deploy the Application Using ArgoCD
 
 Continuous Delivery (CD) is the ability to get code changes reliably to production environments. This practice should be automated and should enable developers to provide value to consumers efficiently.
 
@@ -18,7 +20,7 @@ Install VirtualBox and Vagrant:
 Up Virtual Machine:
 
 - `cd exercises` - change directory to exercises (where the Vagrant file is)
-- `vagrant up` - up the virtual box, if nessesary init with the `vagrant init` first
+- `vagrant up` - up the virtual box, if necessary init with the `vagrant init` first
 - `vagrant status` - check the status of virtual machine
 
 **Notes**: *To stop this VM, you can run `vagrant halt` to shut it down forcefully, or you can run `vagrant suspend` to simply suspend the virtual machine. In either case, to restart it again, simply run `vagrant up`.
@@ -27,21 +29,21 @@ Kubernetes Cluster:
 
 - `vagrant ssh` - next go to the vagrant shell
 - `curl -sfL https://get.k3s.io | sh` get k3s with one command in vagrant environment (inside the shell) see details on [k3s.io](https://k3s.io/)
-- check nodes `kubectl get no` if get error like permission denied need to configure the `/etc/rancher/k3s/k3s.yaml` or use `sudo su` - a command to perform as a superuser.
+- check nodes `kubectl get no` if get an error like permission denied need to configure the `/etc/rancher/k3s/k3s.yaml` or use `sudo su` - a command to perform as a superuser.
 
 **Notes**:
 
-- `kubectl config view` - to view a configuration of cluster
+- `kubectl config view` - to view a configuration of the cluster
 - `shutdown -h now` - to stop the Kubernetes cluster, as the root user
 
-## Solution: Deploy application using ArgoCD
+## Solution 5.1: Deploy the application using ArgoCD
 
 To [install ArgoCD](https://argoproj.github.io/argo-cd/getting_started/#1-install-argo-cd) use following commands inside the vagrant shell:
 
 - `kubectl create namespace argocd`
 - `kubectl apply -n argocd -f https://raw.githubusercontent.com/argoproj/argo-cd/stable/manifests/install.yaml`
 
-Then check pods according to the created argocd namespace (You can see five runnig containers and their status):
+Then check pods according to the created argocd namespace (You can see five running containers and their status):
 
 - `kubectl get po -n argocd`
 
@@ -81,11 +83,11 @@ spec:
 
 `esc` and `:wq` to save changes
 
-Next step is apply created yaml manifest with the following command:
+The next step is to apply created yaml manifest with the following command:
 
 - `kubectl apply -f argocd-server-nodeport.yaml` 
 
-Then in the same manner create the manifest for application
+Then in the same manner create the manifest for the application
 
 - `vim nginx-alpine.yaml`
 
@@ -110,22 +112,22 @@ spec:
 
 `esc` and `:wq` to save changes
 
-- `kubectl apply -f nginx-alpine.yaml` - appling will create application with the command line messege: `application.argoproj.io/nginx-alpine created`
+- `kubectl apply -f nginx-alpine.yaml` - appling will create the application with the command line message: `application.argoproj.io/nginx-alpine created`
 
 - `kubectl get application -n argocd` - check the app
 
-**NOTE:** Pay attention when copy/past manifests - often letter `a` in the first string `apiVersion` lost and it look like `piVersion` that cause the error like this: 
+**NOTE:** Pay attention when copy/past manifests - usually the letter `a` in the first line of `apiVersion` is lost, and turning into `piVersion` causes this error:
 
 `error: error validating "argocd-server-nodeport.yaml": error validating data: apiVersion not set; if you choose to ignore these errors, turn validation off with --validate=false`
 
-So be careful and check if everything was written correctly, e.g.:
+So be careful and check if everything was written correctly:
 
 - `cat nginx-alpine.yaml`
 
 ## Use ArgoCD in your browser at
 
-- http://192.168.50.4.30007
-- http://192.168.50.4.30008
+- <http://192.168.50.4.30007>
+- <http://192.168.50.4.30008>
 
 ## Additional Resources
 

@@ -1,4 +1,4 @@
-# Dockerize Application with GitHub Actions
+# Solution 4: Dockerize Application with GitHub Actions
 
 For this task, you need to create two secrets in your Docker Hub: DOCKERHUB_USERNAME, and DOCKERHUB_TOKEN respectively. It will provide secure access to your account and the Docker image of the application you've built.
 
