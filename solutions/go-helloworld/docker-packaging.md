@@ -51,7 +51,7 @@ Docker container:
 
 1. Install Go: `sudo apt install golang-go`
 2. Make sure you are in the same directory as your `go-helloworld` application and run it using the terminal command `go run main.go`.
-3. Check if your application is working correctly by opening it at: `http://127.0.0.1:6111/` in a web browser.
+3. Check if your application is working correctly by opening it at: <http://127.0.0.1:6111/> in a web browser.
 
 ### Solution 2.1: Dokerfile
 
@@ -96,7 +96,7 @@ Repeat step 1 (build the Docker image):
 - `docker build -t go-helloworld .`
 
 **NOTE:** if you have error messages like this:
-`go: go.mod file not found in current directory or any parent directory; see 'go help modules'`
+`go: go.mod file not found in the current directory or any parent directory; see 'go help modules'`
 `The command '/bin/sh -c go build  -o helloworld' returned a non-zero code: 1`
 it means you need to init `go.mod` file. We can handle this issue using one of the following approaches:
 
@@ -111,6 +111,6 @@ it means you need to init `go.mod` file. We can handle this issue using one of t
 
 Feel free to check the [video Docker for Application Packaging](https://www.youtube.com/watch?v=f6gw_f-CO8U&t=1s)
 
-**NOTE**: To stop a container use following comand:
+**NOTE**: To stop a container use the following command:
 
 `docker stop <CONTAINER NAME>` for example `docker stop sweet_swirles`. To get the CONTAINER NAME use the command `docker ps -a`.
