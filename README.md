@@ -43,7 +43,7 @@ Make sure you have the following dependencies installed:
 All supporting materials and the curriculum can be found in the exercises directory, where each subfolder consists of the skeleton code and the markdown file describing the particular exercise. All solutions in the directory of the same name are supported with notes on possible errors and how to fix them.
 
 - try to solve each problem according to the instructions
-- if you get stuck, feel free to check the solutions, reproduce them using instruction in a specific `solution.md` file, compare it with the provided code, and test.
+- if you get stuck, feel free to check the solution, reproduce it using the instructions in the specific `solution.md` file, compare with the provided code, and test.
 
 ## Recomendations
 
