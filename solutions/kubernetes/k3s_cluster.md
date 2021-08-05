@@ -1,15 +1,18 @@
-# Exercise: Deploy Your First Kubernetes Cluster
+# Exercise 3: Deploy Your First Kubernetes Cluster
 
----
+In the previous steps, we have already created simple applications, dockerized them, and pushed Doker images to the docker hub. So the next step will be to deploy one of these apps from image to Kubernetes cluster on our local machine directly from our Docker Hub.
 
-In the previous steps we have already created simple applications, dokerized them and pushed Doker images to the docker hub. So the next step will be to deploy one of this apps from image to kubernetes cluster on our local machine directly from our docker hub. 
+**NOTE**: This exercise is slightly different from the original one - it was modified according to more practical use cases and connect student progress from the previous lessons.
 
-**NOTE**: This exercise is slightly different from the original one - it was modifited according to more practical use case and connect student progress from the previous lessons.
+## Task 1: Create Kubernetes Cluster
 
-Task 1: Create k3s kubernates cluster on the local machine using Virtual Box and Vagrant 
-Task 2: Deploy application of your choise (go-helloworld or python-helloworld) to the cluster directly from the .
+Create k3s Kubernetes cluster on the local machine using Virtual Box and Vagrant
 
-## Task 1 Solution: Create Kubernetes Cluster
+## Task 2: Deploy Application to the Kubernetes Cluster
+
+Deploy an application of your choice (go-helloworld or python-helloworld) to the cluster directly from the Docker Hub.
+
+## Solution 3.1: Create Kubernetes Cluster
 
 ### Install Required Tools
 
@@ -19,7 +22,7 @@ Task 2: Deploy application of your choise (go-helloworld or python-helloworld) t
 ### Up Virtual Machine
 
 - `cd exercises` - change directory to exercises (where the Vagrant file is)
-- `vagrant up` - up the virtual box, if nessesary init with the `vagrant init` first
+- `vagrant up` - up the virtual box, if necessary init with the `vagrant init` first
 - `vagrant status` - check the status of virtual machine
 
 **NOTE**: *To stop this VM, you can run `vagrant halt` to shut it down forcefully, or you can run `vagrant suspend` to simply suspend the virtual machine. In either case, to restart it again, simply run `vagrant up`.
@@ -28,27 +31,25 @@ Task 2: Deploy application of your choise (go-helloworld or python-helloworld) t
 
 - `vagrant ssh` - next go to the vagrant shell
 - `curl -sfL https://get.k3s.io | sh` get k3s with one command in vagrant environment (inside the shell) see details on [k3s.io](https://k3s.io/)
-- check nodes `kubectl get no` if get error like permission denied need to configure the `/etc/rancher/k3s/k3s.yaml` or use `sudo su` - a command to perform as a superuser.
+- check nodes `kubectl get no` if get an error like permission denied need to configure the `/etc/rancher/k3s/k3s.yaml` or use `sudo su` - a command to perform as a superuser.
 
 **NOTE**: To stop the Kubernetes cluster, as the root user, enter the following command: `shutdown -h now`
 
-## Deploy Application to the Kubernetes Cluster
+## Solution 3.2: Deploy Application to the Kubernetes Cluster
 
 To run the app at a cluster use the command:
 
 - `kubectl run <POD NAME> --image=<DOCKER IMAGE PATH>` e.g., `kubectl run test --image=pixelpotato/go-helloworld:v1.0.0`
 
-**NOTE**: You need to check pod status with `kubectl get pods` or `kubectl describe pod <POD-NAME>`. If the status of created pod is `CreateContainerError` you need to fix this issue with command: `zypper install -t pattern apparmor`
+**NOTE**: You need to check pod status with `kubectl get pods` or `kubectl describe pod <POD-NAME>`. If the status of the reated pod is `CreateContainerError` you need to fix this issue with the command: `zypper install -t pattern apparmor`
 
 To deploy the app to the cluster directly from your Docker hub kubectl command syntax:
 
-- `kubectl create deployment <DEPLOYMENT NAME> --image=docker.io/<DOCKERHUB USERNAME>/<DOKER IMAGE NAME>:<TAG>` e.g. `kubectl create deployment test-go  --image=docker.io/pixelpotato/go-helloworld:v1.0.0`
+- `kubectl create deployment <DEPLOYMENT NAME> --image=docker.io/<DOCKERHUB USERNAME>/<DOKER IMAGE NAME>:<TAG>` e.g., `kubectl create deployment test-go  --image=docker.io/pixelpotato/go-helloworld:v1.0.0`
 
 ### Access the Application on the Local Host
 
-- `kubectl port-forward <POD NAME> 7111:6111`
-
-- [] **NEED TO TEST IT ACCESS AGAIN** An issue with access to the app at the localhost
+- `kubectl port-forward <POD NAME> 6111:6111`
 
 ### Kubeconfig
 
@@ -63,7 +64,7 @@ To deploy the app to the cluster directly from your Docker hub kubectl command s
 - `kubectl get nodes -o wide` - to get extra details about the nodes, including internal IP
 - `kubectl describe node <NODE NAME>` - to get all the configuration details about the node, including the allocated pod CIDR
 - `kubectl get pods` - basic pods information
-- `kubectl describe pod <POD NAME>` - to check the detaled information of a particular pod
+- `kubectl describe pod <POD NAME>` - to check the detailed information of a particular pod
 - `kubectl delete pod <POD NAME>` - to delete pod
 
 [Kubeconfig Walkthrough video tutorial](https://www.youtube.com/watch?v=yi1kR9nDw1g)
