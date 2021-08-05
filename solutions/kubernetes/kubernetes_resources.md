@@ -1,4 +1,4 @@
-# Exercise: Kubernetes Resources
+# Exercise 3.3: Kubernetes Resources
 
 Now you have learned many Kubernetes recourses, in this exercise, you will deploy the following resources using the kubectl command.
 
@@ -28,7 +28,7 @@ Make sure the following tasks are completed:
 - [x] You have created a Service
 - [x] You have created a Configmap
 
-## Solution: Kubernetes Resources
+## Solution 3.3: Kubernetes Resources
 
 ---
 
@@ -42,7 +42,7 @@ Make sure the following tasks are completed:
 
 - `kubectl label ns demo tier=test`
 
-### Create the nginx-alpine deployment 
+### Create the nginx-alpine deployment
 
 - `kubectl create deploy nginx-alpine --image=nginx:alpine  --replicas=3 --namespace demo`
 

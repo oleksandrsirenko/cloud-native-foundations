@@ -54,7 +54,7 @@ To deploy the app to the cluster directly from your Docker hub kubectl command s
 ### Kubeconfig
 
 - K3s stores the kubeconfig file under /etc/rancher/k3s/k3s.yaml path
-- API server - https://127.0.0.1:6111
+- API server - <https://127.0.0.1:6111>
 - authentication mechanism - username (admin) and password
 
 ### Useful kubectl commands (more in [kubectl Cheat Sheet](https://kubernetes.io/docs/reference/kubectl/cheatsheet/))
