@@ -21,13 +21,12 @@ Now you have learned many Kubernetes recourses, in this exercise, you will deplo
 
 **Note**: Nginx is one of the public Docker images, that you can access and use for your exercises or testing purposes.
 
-Make sure the following tasks are compleated:
+Make sure the following tasks are completed:
 
 - [x] You have created a Namespace
 - [x] You have created a Deployment
 - [x] You have created a Service
 - [x] You have created a Configmap
-
 
 ## Solution: Kubernetes Resources
 
