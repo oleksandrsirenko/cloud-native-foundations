@@ -1,4 +1,4 @@
-# Exercise 1.1 Endpoints for Application Status
+# Exercise 1.1: Endpoints for Application Status
 
 Extend the Python Flask application with `/status` and `/metrics` endpoints, considering the following requirements:
 
@@ -9,7 +9,7 @@ Extend the Python Flask application with `/status` and `/metrics` endpoints, con
 
 Feel free to check the [solution video](https://www.youtube.com/watch?v=Kj_hGnViybg) where detailed operations are demonstrated.
 
-## Solution 1.1 Endpoints
+## Solution 1.1: Endpoints
 
 Add to route for each logic like:
 

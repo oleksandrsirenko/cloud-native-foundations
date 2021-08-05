@@ -1,4 +1,4 @@
-# Solution 1.3 Build a Docker Image and Push It to the Docker Hub
+# Solution 1.3: Build a Docker Image and Push It to the Docker Hub
 
 - `sudo apt-get install docker.io` - install docker if not have it yet
 - create a Dockerfile like this (change maintainer name):
