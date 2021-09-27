@@ -7,9 +7,9 @@ Extend the Python Flask application with `/status` and `/metrics` endpoints, con
 - The `/status` endpoint should return a response similar to this example: `result: OK - healthy`
 - The `/metrics` endpoint should return a response similar to this example: `data: {UserCount: 140, UserCountActive: 23}`
 
-Feel free to check the [solution video](https://www.youtube.com/watch?v=Kj_hGnViybg) where detailed operations are demonstrated.
+> :pushpin: **NOTE: Feel free to check the [solution video](https://www.youtube.com/watch?v=Kj_hGnViybg) where detailed operations are demonstrated.**
 
-## Solution 1.1: Endpoints
+# :bulb: Solution 1.1: Endpoints
 
 Add to route for each logic like:
 
@@ -43,4 +43,4 @@ def metrics():
     return response
 ```
 
-See complete code in the `app.py`
+> :pushpin: **NOTE: See complete code in the [app.py](app.py)**

@@ -43,4 +43,4 @@ Docker container:
 
 - should be running on your local machine, by referencing the image from the DockerHub with a valid tag e.g. `pixelpotato/go-helloworld:v5.12.3`
 
-**NOTE:** You will need to use `docker login` to login into Docker before pushing images to Docker Hub.
+:pushpin: **NOTE:** You will need to use `docker login` to login into Docker before pushing images to Docker Hub.

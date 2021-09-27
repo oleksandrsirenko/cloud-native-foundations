@@ -9,8 +9,6 @@ Extend the Python Flask application with `/status` and `/metrics` endpoints, con
 - The `/status` endpoint should return a response similar to this example: `result: OK - healthy`
 - The `/metrics` endpoint should return a response similar to this example: `data: {UserCount: 140, UserCountActive: 23}`
 
-Feel free to check the [solution video](https://www.youtube.com/watch?v=Kj_hGnViybg) where detailed operations are demonstrated.
-
 ## Exercise 1.2: Application Logging
 
 Logging is a core factor in increasing the visibility and transparency of an application. When in troubleshooting or debugging scenarios, it is paramount to pin-point the functionality that impacted the service. This exercise will focus on bringing the logging capabilities to an application.
@@ -24,7 +22,5 @@ In this exercise, you need to further develop the Hello World application collec
 - Enable the collection of Python logs at the `DEBUG` level. Refer to the [logging Python module](https://docs.python.org/3/library/logging.html#logging.basicConfig) for more details.
 
 Note: For the environment setup, follow the instructions in the previous exercise.
-
-Feel free to check the [solution video](https://www.youtube.com/watch?v=rdoXsSx1ghk) where detailed operations are demonstrated.
 
 ## Exercise 1.3 (Optional): Build a Docker Image and Push It to the Docker Hub

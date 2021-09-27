@@ -32,7 +32,7 @@ Make sure the following tasks are completed:
 
 ### Create the namespace
 
-**Note**: label option is not available with `kubectl create`
+:pushpin: **Note**: label option is not available with `kubectl create`
 
 - `kubectl create ns demo`
 

@@ -1,18 +1,18 @@
-# Exercise 3: Deploy Your First Kubernetes Cluster
+# :pencil2: Exercise 3: Deploy Your First Kubernetes Cluster
 
 In the previous steps, we have already created simple applications, dockerized them, and pushed Doker images to the docker hub. So the next step will be to deploy one of these apps from image to Kubernetes cluster on our local machine directly from our Docker Hub.
 
-**NOTE**: This exercise is slightly different from the original one - it was modified according to more practical use cases and connect student progress from the previous lessons.
+> :pushpin: **NOTE: This exercise is slightly different from the original one - it was modified according to more practical use cases and connect student progress from the previous lessons.**
 
-## Task 1: Create Kubernetes Cluster
+## Exercise 3.1: Create Kubernetes Cluster
 
 Create k3s Kubernetes cluster on the local machine using Virtual Box and Vagrant
 
-## Task 2: Deploy Application to the Kubernetes Cluster
+## Exercise 3.2: Deploy Application to the Kubernetes Cluster
 
 Deploy an application of your choice (go-helloworld or python-helloworld) to the cluster directly from the Docker Hub.
 
-## Solution 3.1: Create Kubernetes Cluster
+## :bulb: Solution 3.1: Create Kubernetes Cluster
 
 ### Install Required Tools
 
@@ -23,9 +23,13 @@ Deploy an application of your choice (go-helloworld or python-helloworld) to the
 
 - `cd exercises` - change directory to exercises (where the Vagrant file is)
 - `vagrant up` - up the virtual box, if necessary init with the `vagrant init` first
-- `vagrant status` - check the status of virtual machine
+- `vagrant status` - check the status of Virtual Machine
 
-**NOTE**: *To stop this VM, you can run `vagrant halt` to shut it down forcefully, or you can run `vagrant suspend` to simply suspend the virtual machine. In either case, to restart it again, simply run `vagrant up`.
+> :bulb: **Useful commands**: 
+
+- run `vagrant halt` to shut down Virtual Machine forcefully;
+- run `vagrant suspend` to simply suspend the Virtual Machine;
+- run `vagrant up` to restart Virtual Machine again.
 
 ## Start Kubernetes Cluster
 
@@ -33,7 +37,9 @@ Deploy an application of your choice (go-helloworld or python-helloworld) to the
 - `curl -sfL https://get.k3s.io | sh` get k3s with one command in vagrant environment (inside the shell) see details on [k3s.io](https://k3s.io/)
 - check nodes `kubectl get no` if get an error like permission denied need to configure the `/etc/rancher/k3s/k3s.yaml` or use `sudo su` - a command to perform as a superuser.
 
-**NOTE**: To stop the Kubernetes cluster, as the root user, enter the following command: `shutdown -h now`
+> :bulb: **Useful commands**: 
+
+- stop the Kubernetes cluster, as the root user: `shutdown -h now`
 
 ## Solution 3.2: Deploy Application to the Kubernetes Cluster
 
@@ -41,9 +47,9 @@ To run the app at a cluster use the command:
 
 - `kubectl run <POD NAME> --image=<DOCKER IMAGE PATH>` e.g., `kubectl run test --image=pixelpotato/go-helloworld:v1.0.0`
 
-**NOTE**: You need to check pod status with `kubectl get pods` or `kubectl describe pod <POD-NAME>`. If the status of the reated pod is `CreateContainerError` you need to fix this issue with the command: `zypper install -t pattern apparmor`
+> :pushpin: **NOTE: You need to check pod status with** `kubectl get pods` **or** `kubectl describe pod <POD-NAME>`. **If the status of the reated pod is** `CreateContainerError` **you need to fix this issue with the command:** `zypper install -t pattern apparmor`
 
-To deploy the app to the cluster directly from your Docker hub kubectl command syntax:
+Use the following kubectl command syntax to deploy the app to the cluster directly from your Docker Hub:
 
 - `kubectl create deployment <DEPLOYMENT NAME> --image=docker.io/<DOCKERHUB USERNAME>/<DOKER IMAGE NAME>:<TAG>` e.g., `kubectl create deployment test-go  --image=docker.io/pixelpotato/go-helloworld:v1.0.0`
 

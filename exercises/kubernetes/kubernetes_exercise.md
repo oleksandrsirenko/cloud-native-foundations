@@ -2,7 +2,7 @@
 
 In the previous steps, we have already created simple applications, dockerized them, and pushed Doker images to the docker hub. So the next step will be to deploy one of these apps from image to Kubernetes cluster on our local machine directly from our Docker Hub.
 
-**NOTE**: This exercise is slightly different from the original one - it was modified according to more practical use cases and connect student progress from the previous lessons.
+> :pushpin: **NOTE: This exercise is slightly different from the original one - it was modified according to more practical use cases and connect student progress from the previous lessons.**
 
 ## Task 1: Create Kubernetes Cluster
 
@@ -33,7 +33,7 @@ Now you have learned many Kubernetes recourses, in this exercise, you will deplo
   - containing key-value pair: `version=alpine`
   - namespace: `demo`
 
-**Note**: Nginx is one of the public Docker images, that you can access and use for your exercises or testing purposes.
+> :pushpin: **Note: Nginx is one of the public Docker images, that you can access and use for your exercises or testing purposes.**
 
 Make sure the following tasks are completed:
 

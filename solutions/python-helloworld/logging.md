@@ -12,9 +12,9 @@ In this exercise, you need to further develop the Hello World application collec
 
 Note: For the environment setup, follow the instructions in the previous exercise.
 
-Feel free to check the [solution video](https://www.youtube.com/watch?v=rdoXsSx1ghk) where detailed operations are demonstrated.
+> :pushpin: **NOTE: Feel free to check the [solution video](https://www.youtube.com/watch?v=rdoXsSx1ghk) where detailed operations are demonstrated.**
 
-## Solution 1.2: Logging
+# :bulb: Solution 1.2: Logging
 
 Add log collection logic to the appropriate functions for each route you want to track, like:
 
@@ -31,4 +31,4 @@ Also add the logic to save the logs in a file to main function (need to import `
 logging.basicConfig(filename='app.log',level=logging.DEBUG)
 ```
 
-See complete code in the `app.py`
+> :pushpin: **NOTE: See complete code in the [app.py](app.py)**

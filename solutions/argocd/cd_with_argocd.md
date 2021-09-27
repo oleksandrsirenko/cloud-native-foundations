@@ -23,7 +23,7 @@ Up Virtual Machine:
 - `vagrant up` - up the virtual box, if necessary init with the `vagrant init` first
 - `vagrant status` - check the status of virtual machine
 
-**Notes**: *To stop this VM, you can run `vagrant halt` to shut it down forcefully, or you can run `vagrant suspend` to simply suspend the virtual machine. In either case, to restart it again, simply run `vagrant up`.
+:pushpin: **Notes**: To stop this VM, you can run `vagrant halt` to shut it down forcefully, or you can run `vagrant suspend` to simply suspend the virtual machine. In either case, to restart it again, simply run `vagrant up`.
 
 Kubernetes Cluster:
 
@@ -31,7 +31,7 @@ Kubernetes Cluster:
 - `curl -sfL https://get.k3s.io | sh` get k3s with one command in vagrant environment (inside the shell) see details on [k3s.io](https://k3s.io/)
 - check nodes `kubectl get no` if get an error like permission denied need to configure the `/etc/rancher/k3s/k3s.yaml` or use `sudo su` - a command to perform as a superuser.
 
-**Notes**:
+:bulb: **Useful commands**:
 
 - `kubectl config view` - to view a configuration of the cluster
 - `shutdown -h now` - to stop the Kubernetes cluster, as the root user
@@ -116,7 +116,7 @@ spec:
 
 - `kubectl get application -n argocd` - check the app
 
-**NOTE:** Pay attention when copy/past manifests - usually the letter `a` in the first line of `apiVersion` is lost, and turning into `piVersion` causes this error:
+:pushpin: **NOTE:** Pay attention when copy/past manifests - usually the letter `a` in the first line of `apiVersion` is lost, and turning into `piVersion` causes this error:
 
 `error: error validating "argocd-server-nodeport.yaml": error validating data: apiVersion not set; if you choose to ignore these errors, turn validation off with --validate=false`
 
