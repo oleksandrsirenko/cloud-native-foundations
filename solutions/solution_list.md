@@ -30,4 +30,6 @@
     2. [Create Helm Chart](helm/config_managers.md): `solutions/helm/config_managers.md`
     3. [Deploy Helm Chart](helm/config_managers.md): `solutions/helm/config_managers.md`
 
-[Back to main README](../README.md)
+[<- Back to main README](../README.md)
+
+[-> Explore exercise list](../exercise_program.md)

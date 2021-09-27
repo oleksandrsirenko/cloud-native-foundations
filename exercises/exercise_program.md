@@ -30,4 +30,6 @@
     2. [Create Helm Chart](helm/helm_exercise.md)
     3. [Deploy Helm Chart](helm/helm_exercise.md)
 
-[Back to main README](../README.md)
+[<- Back to main README](../README.md)
+
+[-> Explore solution list](../solution_list.md)
