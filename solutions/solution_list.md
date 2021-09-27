@@ -32,4 +32,4 @@
 
 [<- Back to main README](../README.md)
 
-[-> Explore exercise list](../exercise_program.md)
+[-> Explore exercise list](../exercises/exercise_program.md)

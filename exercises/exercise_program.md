@@ -32,4 +32,4 @@
 
 [<- Back to main README](../README.md)
 
-[-> Explore solution list](../solution_list.md)
+[-> Explore solution list](../solutions/solution_list.md)
