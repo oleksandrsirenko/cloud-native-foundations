@@ -14,7 +14,7 @@ The main goal of this work is to consolidate the knowledge gained and help stude
 
 The repository consists of three main parts: exercises, solutions, and a project.
 
-1. All supporting materials and the [exercise_program.md]. . (exercises/exercise_program.md) can be found in the `exercises` directory, where each subfolder consists of the skeleton code and the markdown file describing the particular exercise.
+1. All supporting materials and the [exercise_program.md](exercises/exercise_program.md) can be found in the `exercises` directory, where each subfolder consists of the skeleton code and the markdown file describing the particular exercise.
 
 2. In the directory `solutions` you will find [solutions.md](solutions/solution_list.md) file lineked to all the answers, accompanied by detailed notes on possible errors and how to fix them.
 
