@@ -44,3 +44,5 @@ def metrics():
 ```
 
 > :pushpin: **NOTE: See complete code in the [app.py](app.py)**
+
+[-> Back to solution list](../solution_list.md)

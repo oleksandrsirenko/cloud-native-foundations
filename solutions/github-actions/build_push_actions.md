@@ -8,3 +8,5 @@ See details in the tutorial [Dockerize the app with GitHub Actions](https://www.
 
 [Best Practices from Docker Docs](https://docs.docker.com/ci-cd/github-actions/)
 [Publishing Docker Images Approach from GitHub](https://docs.github.com/en/actions/guides/publishing-docker-images)
+
+[-> Back to solution list](../solution_list.md)

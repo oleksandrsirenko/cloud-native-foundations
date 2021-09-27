@@ -85,3 +85,5 @@ Use the following kubectl command syntax to deploy the app to the cluster direct
 6. [Using kubectl to Create a Deployment](https://kubernetes.io/docs/tutorials/kubernetes-basics/deploy-app/deploy-intro/)
 7. [How to Delete Pods from a Kubernetes Node](https://www.bluematador.com/blog/safely-removing-pods-from-a-kubernetes-node)
 8. [Use Port Forwarding to Access Applications in a Cluster](https://kubernetes.io/docs/tasks/access-application-cluster/port-forward-access-application-cluster/)
+
+[-> Back to solution list](../solution_list.md)

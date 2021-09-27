@@ -60,3 +60,5 @@ Next, create 2 values files with the following specifications:
   - configmap data: "version: 1.17.0"
 
 Finally, using the values files above (values-prod, values-staging), create 2 ArgoCD application, `nginx-staging` and `nginx-prod` respectively. These should deploy the nginx Helm Chart referencing each input values files.
+
+[-> Back to exercise list](../exercise_program.md)

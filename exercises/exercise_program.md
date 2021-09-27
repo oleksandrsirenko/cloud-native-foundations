@@ -29,3 +29,5 @@
     1. [Deploy the application using ArgoCD](argocd/argocd_exercise.md)
     2. [Create Helm Chart](helm/helm_exercise.md)
     3. [Deploy Helm Chart](helm/helm_exercise.md)
+
+[Back to main README](../README.md)

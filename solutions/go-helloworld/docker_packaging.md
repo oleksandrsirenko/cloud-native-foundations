@@ -134,3 +134,5 @@ Feel free to check the [video Docker for Application Packaging](https://www.yout
 
 - Stop a container: `docker stop <CONTAINER NAME>` 
 - Get container name: `docker ps -a`
+
+[-> Back to solution list](../solution_list.md)

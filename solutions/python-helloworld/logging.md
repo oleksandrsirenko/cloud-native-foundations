@@ -32,3 +32,5 @@ logging.basicConfig(filename='app.log',level=logging.DEBUG)
 ```
 
 > :pushpin: **NOTE: See complete code in the [app.py](app.py)**
+
+[-> Back to solution list](../solution_list.md)

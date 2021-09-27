@@ -55,3 +55,6 @@ Make sure the following tasks are completed:
 ### Create a config map
 
 - `kubectl create configmap nginx-version --from-literal=version=alpine --namespace demo`
+
+
+[-> Back to solution list](../solution_list.md)

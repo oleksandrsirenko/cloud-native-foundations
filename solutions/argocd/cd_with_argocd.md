@@ -134,3 +134,5 @@ So be careful and check if everything was written correctly:
 1. [Guide To GitOps](https://www.weave.works/technologies/gitops/)
 2. [ArgoCD Installation video](https://www.youtube.com/watch?v=TJrSM31Jj_8)
 3. [Deploy app with ArgoCD](https://www.youtube.com/watch?v=mYg-ULq9Rzg)
+
+[-> Back to solution list](../solution_list.md)

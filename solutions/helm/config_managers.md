@@ -169,3 +169,5 @@ Additional resources:
 1. [Helm Walkthrough video](https://www.youtube.com/watch?v=i1ZvdS7qdAI)
 2. [Create Helm Chart](https://www.youtube.com/watch?v=aDqyHi2iiQk)
 3. [Deploy Helm Chart](https://www.youtube.com/watch?v=k-7N7gcwW5Y)
+
+[-> Back to solution list](../solution_list.md)

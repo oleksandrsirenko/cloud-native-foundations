@@ -24,3 +24,5 @@ Note: Make sure to have [VirtualBox](https://www.virtualbox.org/wiki/Downloads) 
 - [x] Access the ArgoCD UI by going to `https://192.168.50.4.30008` or `https://192.168.50.4.30007`
 - [x] Insert login credantials by using credentials guide
 - [x] Create an ArgoCD application named `nginx-alpine` and use the manifests provided in the course repository
+
+[-> Back to exercise list](../exercise_program.md)
