@@ -1,60 +1,89 @@
-# Cloud Native Foundations
+# Welcome to Cloud Native Foundations Workshop!
 
 *Learn how to structure, package, and release an application to a Kubernetes cluster using an automated CI/CD pipeline.*
 
-## About
+## :zzz: About
 
-Cloud Native Foundations is an educational tutorial for students learning cloud-native application development.
+[Cloud Native Foundations Workshop]() is an educational guide for students learning cloud-native application development.
 
-The tutorial relates to [SUSE Cloud Native Foundations Scholarship Program](https://www.udacity.com/scholarships/suse-cloud-native-foundations-scholarship) and focuses on applying software development best practices, app containerizing approaches, and releasing applications to a Kubernetes cluster using an automated CI/CD pipeline.
+This learning guide relates to [SUSE Cloud Native Foundations Scholarship Program](https://www.udacity.com/scholarships/suse-cloud-native-foundations-scholarship)
+from Udacity and covers all [hands-on exercises](https://github.com/udacity/nd064_course_1) in the Cloud Native Foundations Course.
 
-The repository contains Cloud Native Foundations [hands-on exercises](https://github.com/udacity/nd064_course_1) and detailed step-by-step solutions seasoned with notes on how to correct possible errors that students encounter while solving programming challenges.
+## :dart: Objective
 
-# Goal
+The main goal of this project is to build a knowledge base and help you solve 
+technical issues outside the scope of the Cloud Native Foundation Course. 
 
-The main goal of this project is to guide students and help them solve technical issues outside the scope of the course.
+## :card_file_box: Content
 
-## Repository Structure
+The workshop contains exercises and solutions on selected topics that will help you understand the basics of building, deploying, and maintaining cloud-native applications. This is NOT a comprehensive guide, but rather a focused look at a few key topics:
 
-The repository consists of three main parts: exercises, solutions, and a project.
+- Flask web development best practices.
+- App containerization with Docker.
+- Releasing applications to a Kubernetes cluster.
+- Automation software development workflows with GitHub Actions.
+- Using ArgoCD to build reliable CI/CD pipelines.
 
-1. All supporting materials and the [exercise_program.md](exercises/exercise_program.md) can be found in the `exercises` directory, where each subfolder consists of the skeleton code and the markdown file describing the particular exercise.
+## :bulb: Documentation
 
-2. In the directory `solutions` you will find [solutions.md](solutions/solution_list.md) file lineked to all the answers, accompanied by detailed notes on possible errors and how to fix them.
+> Find out the online version of [Cloud Native Foundations Workshop on the Read the Docs]()...comming soon.
 
-3. The `project` directory is under development.
+The project documentation was developed with Sphinx and can be generated locally with a single line of code from the Linux shell.
 
-## How to Use
+To generate project documentation, follow these steps:
 
-- open [exercise_program.md](exercises/exercise_program.md);
-- try to solve each problem from the list of exercises according to the instructions;
-- if you get stuck, feel free to check the corresponding solution from the [solutions.md](solutions/solution_list.md) and reproduce it using the instructions.
+- Change the working directory to docs: `cd docs`
+- Generate the documentation with: `make html`
+- Open the documentation in a web browser: `firefox build/html/index.html`
 
-## Course Outline
+## :man_student: Required Knowledge
 
-- Introduction to Cloud Native
-- Architecture Considerations
-- Container Orchestration
-- Open Source PaaS
-- Cloud Native CI/CD
+- Python
+- Flask web development (introductory level)
+- Networking (REST, protocols, HTTP methods)
+- Git (basic commands, working with remote repositories)
+- Linux shell commands
 
-## Required Knowledge
+## :computer: Required Tools
 
-- Python (data types, functions, OOP).
-- Basics of web development.
-- Networking (REST, protocols, HTTP methods).
-- Basics of Git and ability to use Git repository hosting services (GitHub, GitLab, or BitBucket).
-- Shell commands in Linux.
-- The knowledge of Docker, Kubernetes, and CI/CD orchestration is not required but would be helpful.
-
-## Required Tools and Dependencies
-
+- [x] IDE of your choice ([VS Code](https://code.visualstudio.com), [Sublime](https://www.sublimetext.com/), etc.)
 - [x] [Python](https://www.python.org/downloads/)
 - [x] [Git](https://git-scm.com/downloads)
 - [x] [Docker](https://docs.docker.com/get-docker/)
-- [x] [Vagrant](https://www.vagrantup.com/downloads)
 - [x] [VirtualBox 6.1.16 +](https://www.virtualbox.org/wiki/Downloads)
+- [x] [Vagrant](https://www.vagrantup.com/downloads)
 
-## Recomendations
+## :open_file_folder: Project Organization (main tree)
 
-The current version developed and tested on [Ubuntu 20.04](https://ubuntu.com/download/desktop) using [VS Code](https://code.visualstudio.com) as IDE. While most of this stuff will work on Windows, it will take a lot of work to debug and solve some unusual problems. Use a Unix-like operating system based on the Linux kernel. This will save you a lot of time and hassle.
+    │
+    ├── docs               <- Workshop documetation
+    ├── exercises          <- Boilerplate code for exercises
+    ├── solutions          <- Complete solution code
+    │
+    ├── .gitignore         <- Set of patterns for files/directories to ignore
+    ├── LICENSE            <- License information
+    ├── README.md          <- The top-level README for developers
+    ├── requirements.txt   <- The requirements file for reproducing environment
+    ├── test_env.py        <- Script to test Python environment setup
+    │
+    └── Vagrantfile        <- Virtual machine config file (base template)
+
+## :vulcan_salute: How to Use
+
+The quickest way to get started is to open the [online documentation]() and walk through the tutorial. There you will find everything you need to get the job done and create your own cloud-native development solutions. 
+
+> :pushpin: You can also download the `epub` and `pdf` version of the workshop and use it on your phone or tablet.
+
+## :gear: Prepare to Workshop
+
+Install VS Code, Python and Git if you have not yet. Then follow these steps to set up your development environment and get the most out of this workshop:
+
+1. Fork this repository.
+2. Clone **your fork** of this repository to your local machine.
+3. Open the workshop folder from IDE (VS Code, Sublime, PyCharm).
+4. Run the command  `python3 -m venv venv` from the terminal to make the virtual environment.
+5. Activate the virtual environment with `source venv/bin/activate` command.
+6. Install dependencies using `pip install -r requirements.txt` command.
+7. Change directory to docs: `cd docs`.
+8. Generate a local copy of workshop documentation by running `make html`.
+9. Open the local copy of the documentation in a web browser: `firefox build/html/index.html`.
