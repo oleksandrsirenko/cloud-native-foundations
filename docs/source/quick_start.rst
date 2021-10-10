@@ -41,8 +41,8 @@ your own knowledge base. To make it possible just follow the instructions:
 1. Open the workshop folder with IDE and run terminal
 2. Create the virtual environment: ``python3 -m venv venv``
 3. Activate the virtual environment: ``source venv/bin/activate``
-4. Change the working directory to docs: ``cd docs`` 
-5. Install dependencies: ``pip install -r requirements.txt``
+4. Install dependencies: ``pip install -r requirements.txt``
+5. Change the working directory to docs: ``cd docs``
 6. Generate a local copy of workshop documentation by running ``make html``
 7. Open the local copy of the documentation in a web browser: ``firefox build/html/index.html``
 
