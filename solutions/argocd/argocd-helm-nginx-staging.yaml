@@ -13,5 +13,5 @@ spec:
       valueFiles:
       - values-staging.yaml
     path: solutions/helm/nginx-deployment
-    repoURL: https://github.com/udacity/nd064_course_1
+    repoURL: https://github.com/oleksandrsirenko/cloud-native-foundations
     targetRevision: HEAD

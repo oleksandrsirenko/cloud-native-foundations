@@ -11,8 +11,7 @@ from Udacity and covers all [hands-on exercises](https://github.com/udacity/nd06
 
 ## :dart: Objective
 
-The main goal of this project is to build a knowledge base and help you solve 
-technical issues outside the scope of the Cloud Native Foundation Course. 
+The main goal of this project is to build a knowledge base and help students solve technical issues outside the scope of the Cloud Native Foundation Course. 
 
 ## :card_file_box: Content
 
@@ -83,7 +82,7 @@ Install VS Code, Python and Git if you have not yet. Then follow these steps to 
 3. Open the workshop folder from IDE (VS Code, Sublime, PyCharm).
 4. Run the command  `python3 -m venv venv` from the terminal to make the virtual environment.
 5. Activate the virtual environment with `source venv/bin/activate` command.
-6. Install dependencies using `pip install -r requirements.txt` command.
-7. Change directory to docs: `cd docs`.
+6. Change directory to documentation: `cd docs`.
+7. Install documentation dependencies using `pip install -r requirements.txt` command.
 8. Generate a local copy of workshop documentation by running `make html`.
 9. Open the local copy of the documentation in a web browser: `firefox build/html/index.html`.

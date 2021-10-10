@@ -1,4 +1,7 @@
-FROM golang:alpine
+
+# syntax=docker/dockerfile:1
+
+FROM golang:1.16-alpine
 
 WORKDIR /go/src/app
 
@@ -8,6 +11,6 @@ RUN go mod init
 
 RUN go build -o helloworld
 
-EXPOSE 6111
+EXPOSE 8080
 
 CMD ["./helloworld"]
