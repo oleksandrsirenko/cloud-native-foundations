@@ -36,7 +36,7 @@ The documentation is the core of the workshop. You can [generate](#blue_book-gen
 Find out the online version of [Cloud Native Foundations Workshop on the Read the Docs](https://cloud-native-foundations-workshop.readthedocs.io).
 
 <div align="center">
-    <img src="docs/source/_static/images/cloud-native-rtd-2.png"/>
+   <a href=https://cloud-native-foundations-workshop.readthedocs.io><img src="docs/source/_static/images/cloud-native-rtd-2.png" title="Cloud Native Foundations Workshop" alt="Cloud Native Foundations Workshop"/></a>
 </div>
 
 ## :man_student: Required Knowledge
