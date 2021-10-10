@@ -1,10 +1,12 @@
 # Welcome to Cloud Native Foundations Workshop!
 
+[![Documentation Status](https://readthedocs.org/projects/cloud-native-foundations-workshop/badge/?version=latest)](https://cloud-native-foundations-workshop.readthedocs.io/en/latest/?badge=latest)
+
 *Learn how to structure, package, and release an application to a Kubernetes cluster using an automated CI/CD pipeline.*
 
 ## :zzz: About
 
-[Cloud Native Foundations Workshop]() is an educational guide for students learning cloud-native application development.
+[Cloud Native Foundations Workshop](https://cloud-native-foundations-workshop.readthedocs.io) is an educational guide for students learning cloud-native application development.
 
 This learning guide relates to [SUSE Cloud Native Foundations Scholarship Program](https://www.udacity.com/scholarships/suse-cloud-native-foundations-scholarship)
 from Udacity and covers all [hands-on exercises](https://github.com/udacity/nd064_course_1) in the Cloud Native Foundations Course.
@@ -23,17 +25,19 @@ The workshop contains exercises and solutions on selected topics that will help 
 - Automation software development workflows with GitHub Actions.
 - Using ArgoCD to build reliable CI/CD pipelines.
 
-## :bulb: Documentation
+## :inbox_tray: Documentation
 
-> Find out the online version of [Cloud Native Foundations Workshop on the Read the Docs]()...comming soon.
+The documentation is the core of the workshop. You can [generate](#blue_book-generate-docs) it automatically with a single line of code and use it locally without internet access. Moreover, you can edit and improve documentation, contributing to this project, or build your own knowledge base. You can also download the documentation in the following formats:
 
-The project documentation was developed with Sphinx and can be generated locally with a single line of code from the Linux shell.
+- [PDF](https://cloud-native-foundations-workshop.readthedocs.io/_/downloads/en/latest/pdf/)
+- [ePub](https://cloud-native-foundations-workshop.readthedocs.io/_/downloads/en/latest/epub/)
+- [Zipped HTML](https://cloud-native-foundations-workshop.readthedocs.io/_/downloads/en/latest/htmlzip/)
 
-To generate project documentation, follow these steps:
+Find out the online version of [Cloud Native Foundations Workshop on the Read the Docs](https://cloud-native-foundations-workshop.readthedocs.io).
 
-- Change the working directory to docs: `cd docs`
-- Generate the documentation with: `make html`
-- Open the documentation in a web browser: `firefox build/html/index.html`
+<div align="center">
+    <img src="docs/source/_static/images/cloud-native-rtd-2.png"/>
+</div>
 
 ## :man_student: Required Knowledge
 
@@ -60,6 +64,7 @@ To generate project documentation, follow these steps:
     ├── solutions          <- Complete solution code
     │
     ├── .gitignore         <- Set of patterns for files/directories to ignore
+    ├── .readthedocs.yaml  <- Read the Docs configuration file
     ├── LICENSE            <- License information
     ├── README.md          <- The top-level README for developers
     ├── requirements.txt   <- The requirements file for reproducing environment
@@ -67,22 +72,33 @@ To generate project documentation, follow these steps:
     │
     └── Vagrantfile        <- Virtual machine config file (base template)
 
-## :vulcan_salute: How to Use
+## :rocket: How to Get Started
 
-The quickest way to get started is to open the [online documentation]() and walk through the tutorial. There you will find everything you need to get the job done and create your own cloud-native development solutions. 
+At the moment, the workshop includes two main sections: exercises and solutions. The quickest way to get started is to open the [Cloud Native Foundations Workshop on the Read the Docs](https://cloud-native-foundations-workshop.readthedocs.io) and walk through the tutorial. There you will find everything you need to get the job done and create your own cloud-native development solutions. 
 
-> :pushpin: You can also download the `epub` and `pdf` version of the workshop and use it on your phone or tablet.
+#### :inbox_tray: Obtain Data
 
-## :gear: Prepare to Workshop
+1. Fork the workshop repository.
+2. On GitHub, navigate to **your fork** of the workshop repository and copy the URL.
+3. Clone forked repository to your local machine using `git clone` command. It will look like this, with your GitHub username instead of `YOUR_USERNAME`:
 
-Install VS Code, Python and Git if you have not yet. Then follow these steps to set up your development environment and get the most out of this workshop:
+```shell
+git clone https://github.com/YOUR_USERNAME/cloud-native-foundations
+```
 
-1. Fork this repository.
-2. Clone **your fork** of this repository to your local machine.
-3. Open the workshop folder from IDE (VS Code, Sublime, PyCharm).
-4. Run the command  `python3 -m venv venv` from the terminal to make the virtual environment.
-5. Activate the virtual environment with `source venv/bin/activate` command.
-6. Install dependencies using `pip install -r requirements.txt` command.
-7. Change directory to docs: `cd docs`.
-8. Generate a local copy of workshop documentation by running `make html`.
-9. Open the local copy of the documentation in a web browser: `firefox build/html/index.html`.
+**See details on** [how to fork and clone the repository.](https://docs.github.com/en/get-started/quickstart/fork-a-repo)
+
+#### :gear: Set Up Environment
+
+1. Open the workshop folder with IDE and run terminal.
+2. Create the virtual environment: `python3 -m venv venv`
+3. Activate the virtual environment: `source venv/bin/activate`
+4. Install dependencies: `pip install -r requirements.txt`
+
+#### :blue_book: Generate Docs
+
+1. Change the working directory to docs: `cd docs`
+2. Generate a local copy of workshop documentation by running `make html`
+3. Open the local copy of the documentation in a web browser: `firefox build/html/index.html`
+
+#### :100: Now you have everything you need to get the most out of this workshop! :tada:

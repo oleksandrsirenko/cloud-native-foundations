@@ -30,8 +30,9 @@ See details on `how to fork and clone the repository. <https://docs.github.com/e
 
 .. _gen_docs:
 
-Generate Docs
--------------
+
+Generate Documentation
+----------------------
 
 The documentation is the core of the workshop. You can generate it automatically 
 with a single line of code and use it locally without internet access. Moreover, 
@@ -47,6 +48,21 @@ your own knowledge base. To make it possible just follow the instructions:
 7. Open the local copy of the documentation in a web browser: ``firefox build/html/index.html``
 
 Now you have everything you need to get the most out of this workshop.
+
+
+Download Documentation
+----------------------
+
+You can download the Cloud Native Foundations Workshop docs in the following formats:
+
+- `PDF`_ 
+- `ePub`_
+- `Zipped HTML`_ 
+    
+.. _PDF: https://cloud-native-foundations-workshop.readthedocs.io/_/downloads/en/latest/pdf/
+.. _ePub: https://cloud-native-foundations-workshop.readthedocs.io/_/downloads/en/latest/epub/
+.. _Zipped HTML: https://cloud-native-foundations-workshop.readthedocs.io/_/downloads/en/latest/htmlzip/
+
 
 .. _how_to_use:
 
