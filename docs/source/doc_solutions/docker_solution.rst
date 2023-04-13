@@ -97,7 +97,7 @@ Useful Docker Commands
 - Remove all the processes: ``docker rm $(docker ps -a -q)``
 - Remove all the images: ``docker rmi $(docker images -q)``
 
-Find out more helpful commands in the `Docker Cheat Sheet. <https://www.docker.com/sites/default/files/d8/2019-09/docker-cheat-sheet.pdf>`__ 
+Find out more helpful commands in the `Docker Cheat Sheet. <https://docs.docker.com/get-started/docker_cheatsheet.pdf>`__ 
 
 
 Solution 2.5 - Dockerize Python Flask Application
